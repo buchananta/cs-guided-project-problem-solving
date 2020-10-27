@@ -13,7 +13,20 @@ Examples:
 - get_middle("middle") -> "dd"
 - get_middle("A") -> "A"
 """
+import math
 def get_middle(input_str):
     # Your code here
+    start = math.floor((len(input_str) -1) / 2)
+    end = math.ceil((len(input_str) -1) / 2)
+    return input_str[start:end + 1]
 
 
+def is_even(n: int) -> bool:
+    return n % 2 == 0
+def get_middleInstructor(input_str: str) -> str:
+    if is_even(len(input_str)):
+        midpoint = len(input_str) // 2
+        return input_str[midpoint -1 : midpoint + 1]
+    else:
+        midpoint = len(input_str) // 2
+        return input_str[midpoint]

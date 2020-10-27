@@ -12,6 +12,10 @@ Examples:
 Notes:
 - Bonus: Try to complete this challenge in one line!
 """
+from functools import reduce
 def multiply_nums(nums):
     # Your code here
+    nums = nums.split(',')
+    return reduce(lambda a, b: int(a)*int(b), nums)
+
 

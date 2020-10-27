@@ -17,4 +17,12 @@ Notes:
 
 def last(a, n):
     # Your code here
+    if n > len(a):
+        return "invalid"
+    return a[-n:]
 
+from typing import List
+def lastInstructor(a: List[int], n: int) -> List[int]:
+    if n > len(a):
+        return "invalid"
+    return a[len(a) - n:]

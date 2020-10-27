@@ -17,4 +17,20 @@ Notes:
 
 def add_indexes(numbers):
     # Your code here
+    for i in range(len(numbers)):
+        numbers[i] += i
+    return numbers
+
+def add_indexesNavroz(numbers):
+    return [(i+value) for i, value in enumerate(numbers)]
+
+from typing import List
+def add_indexesInstructor(numbers: List[int]) -> List[int]:
+    output = []
+    for i in range(len(numbers)):
+        n = numbers[i]
+        sum = n + i
+        output.append(sum)
+    return output
+
 
